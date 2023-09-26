@@ -42,3 +42,31 @@ function decryptText(encryptedText, key) {
 
   return decryptedText;
 }
+
+function updateResult(isEncrypting) {
+  const text = document.getElementById("message").value;
+  const key = document.getElementById("key").value;
+
+  let result = "";
+
+  if (isEncrypting) {
+    result = encryptText(text, key);
+  } else {
+    result = decryptText(text, key);
+  }
+
+  document.getElementById("result").textContent = result;
+}
+
+document.getElementById("enc-btn").addEventListener('click', function () {
+  updateResult(true);
+});
+
+document.getElementById("dec-btn").addEventListener('click', function () {
+  updateResult(false);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateResult(true);
+});
