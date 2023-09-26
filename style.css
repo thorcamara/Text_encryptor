@@ -50,3 +50,28 @@ input {
   border: 1px solid #999;
   resize: none;
 }
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px;
+  font-size: 15px;
+  width: 50%;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #35302d;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
